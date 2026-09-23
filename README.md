@@ -5,7 +5,7 @@ A complete, database-backed Point-of-Sale application built using the **CodeIgni
 
 ---
 
-## 🌟 Key Features
+## Key Features
 - **Authentication & Security:** Protected routes using a custom `AuthGuard` filter to prevent unauthenticated access to management areas.
 - **Product Management:** Complete CRUD functionality with form validation and secure product image file uploads.
 - **Customer Management:** Full CRUD tracking for registered client information.
@@ -14,7 +14,7 @@ A complete, database-backed Point-of-Sale application built using the **CodeIgni
 
 ---
 
-## 🛠️ Local Development Installation Setup
+## Local Development Installation Setup
 
 Follow these sequential steps to run this application locally on your machine using **XAMPP**:
 
@@ -56,14 +56,14 @@ Open your web browser and go to: `http://localhost:8080`
 
 ---
 
-## 🔐 Default Test Credentials
+## Default Test Credentials
 Use these generated seeder account values to bypass the login authorization guard:
 - **Username:** `admin`
 - **Password:** `password123`
 
 ---
 
-## 📝 Program Outcomes (PO) & Course Learning Outcomes (CLO) Addressed
+## Program Outcomes (PO) & Course Learning Outcomes (CLO) Addressed
 - **PO: C** - Design, implement and evaluate computer-based systems or applications to meet desired needs and requirements.
 - **CLO: 2** - Apply advanced web development principles in creating, debugging, validating, and securing database-backed web applications.
 - **CLO: 3** - Design program flow and application structure for computing problems using CodeIgniter frameworks.
