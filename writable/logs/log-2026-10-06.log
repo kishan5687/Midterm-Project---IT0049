@@ -1,0 +1,426 @@
+DEBUG - 2026-10-06 13:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 13:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 13:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-06 13:51:52 --> Error connecting to the database: mysqli_sql_exception: Host 'localhost' is not allowed to connect to this MariaDB server in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Host 'localhost' is not allowed to connect to this MariaDB server in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-06 13:51:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Host 'localhost' is not allowed to connect to this MariaDB server
+[Method: POST, Route: loginProcess]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-06 14:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-06 14:00:34 --> Error connecting to the database: mysqli_sql_exception: Host 'localhost' is not allowed to connect to this MariaDB server in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Host 'localhost' is not allowed to connect to this MariaDB server in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-06 14:00:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Host 'localhost' is not allowed to connect to this MariaDB server
+[Method: POST, Route: loginProcess]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-06 14:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 14:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-06 14:04:55 --> Error connecting to the database: mysqli_sql_exception: Host 'localhost' is not allowed to connect to this MariaDB server in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Host 'localhost' is not allowed to connect to this MariaDB server in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-06 14:04:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Host 'localhost' is not allowed to connect to this MariaDB server
+[Method: POST, Route: loginProcess]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-06 14:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-06 14:07:47 --> Error connecting to the database: mysqli_sql_exception: Host 'localhost' is not allowed to connect to this MariaDB server in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Host 'localhost' is not allowed to connect to this MariaDB server in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-06 14:07:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Host 'localhost' is not allowed to connect to this MariaDB server
+[Method: POST, Route: loginProcess]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-06 14:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-06 14:12:48 --> CodeIgniter\Exceptions\ConfigException: Invalid DBDriver name: "MariaDB"
+[Method: POST, Route: loginProcess]
+in SYSTEMPATH\Database\Database.php on line 176.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('MariaDB')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(152): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\AuthController.php(12): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-06 14:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 14:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-06 14:13:22 --> CodeIgniter\Exceptions\ConfigException: Invalid DBDriver name: "MariaDB"
+[Method: POST, Route: loginProcess]
+in SYSTEMPATH\Database\Database.php on line 176.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('MariaDB')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(152): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\AuthController.php(12): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-06 14:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 14:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-06 14:20:11 --> Error connecting to the database: mysqli_sql_exception: Host 'localhost' is not allowed to connect to this MariaDB server in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Host 'localhost' is not allowed to connect to this MariaDB server in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-06 14:20:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Host 'localhost' is not allowed to connect to this MariaDB server
+[Method: POST, Route: loginProcess]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-06 14:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 14:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 14:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-06 14:59:36 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'pos_system' in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'pos_system' in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-06 14:59:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'pos_system'
+[Method: POST, Route: loginProcess]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(17): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-06 17:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 17:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-06 18:08:23 --> ParseError: syntax error, unexpected token "*", expecting "function" or "const"
+[Method: GET, Route: /]
+in APPPATH\Controllers\BaseController.php on line 15.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\app\\Controllers\\BaseController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BaseController')
+ 3 APPPATH\Controllers\DashboardController.php(4): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BaseController')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\app\\Controllers\\DashboardController.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\app\\Controllers\\DashboardController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DashboardController')
+ 7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DashboardController')
+ 8 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\DashboardController')
+ 9 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+10 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('/')
+11 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-06 18:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 18:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

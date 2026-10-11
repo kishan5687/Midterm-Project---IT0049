@@ -1,0 +1,387 @@
+DEBUG - 2026-10-03 02:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-03 02:54:03 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-03 02:54:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-03 02:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 02:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-03 02:55:39 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\CustomerController.php(9): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\CustomerController.php(9): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-03 02:55:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CustomerController.php(9): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-03 03:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 03:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 03:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-03 03:06:47 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-03 03:06:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-03 03:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-03 03:07:17 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-03 03:07:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-03 03:24:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-03 03:24:38 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-03 03:24:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-03 03:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 03:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-03 03:25:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-03 03:25:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-03 03:25:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-03 03:25:52 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\app\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(974): App\Controllers\ProductController->index()
+#7 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#8 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\kisha\Downloads\Midterm-Project---IT0049-main\system\rewrite.php(44): require_once('C:\\Users\\kisha\\...')
+#13 {main}
+CRITICAL - 2026-10-03 03:25:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ProductController.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\kisha\\Downloads\\Midterm-Project---IT0049-main\\public\\index.php')
+DEBUG - 2026-10-03 03:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 03:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 03:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
